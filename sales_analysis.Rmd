@@ -1,0 +1,49 @@
+---
+title: "Synthetic Sales Analysis: R Script Documentation"
+author: "Anne Agyeman"
+output: html_document
+---
+
+# AI Assistance Declaration
+
+I used ChatGPT (GPT-6) on October 22, 2026, to help draft the structure and example R code for this document. The prompts and selected responses are described in `Appendix.md`. I must independently run the code, check the arithmetic, preview the rendered document, and record any corrections before claiming verification. I am responsible for the final submission.
+
+# Purpose
+
+This document explains `sales_analysis.R`, a small educational script that demonstrates how to calculate transaction sales and summarize sales by category. The example uses **synthetic data only** and does not describe a real business.
+
+## Inputs
+
+The script creates six fictional transactions directly in R. Each record has a product `category`, `quantity`, and `unit_price`. No external CSV or private data is required.
+
+## Processing Steps
+
+1. Create the synthetic transaction data frame.
+2. Calculate `total_sales` for each row as `quantity * unit_price`.
+3. Group rows by `category` and sum their sales.
+4. Print the resulting category summary.
+
+## Example R Code
+
+The following chunk runs the accompanying script. Keep `sales_analysis.R` in the same folder as this `.Rmd` file when knitting.
+
+```{r run-analysis}
+source("sales_analysis.R")
+```
+
+## Outputs
+
+The script prints a two-column table: `category` and `total_sales`. To check the calculation yourself, multiply the quantities by their unit prices for each transaction, then add the amounts within each category. Compare your manually calculated totals with the table printed by R.
+
+## Verification Checklist
+
+- [ ] Run `source("sales_analysis.R")` in RStudio or Posit Cloud without errors.
+- [ ] Independently calculate each row's sales and category totals.
+- [ ] Compare the independent calculations against the printed output.
+- [ ] Knit this `.Rmd` document and inspect headings and the R code output.
+- [ ] Check the `README.md` preview on GitHub.
+- [ ] Record actual checks and changes in `Appendix.md`.
+
+## Limitations
+
+This is a six-row, illustrative dataset. It does not represent real sales trends or support business conclusions. The R Markdown HTML output requires an environment with the `rmarkdown` package and its rendering dependencies installed.
